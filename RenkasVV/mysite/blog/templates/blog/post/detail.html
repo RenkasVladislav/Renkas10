@@ -8,4 +8,29 @@
     Published {{ post.publish }} by {{ post.author }}
   </p>
   {{ post.body|linebreaks }}
+  
+  {% with comments.count as total_comments %}
+ <h2>{{ total_comments }} comment{{ total_comments|pluralize }}</h2>
+{% endwith %}
+
+{% for comment in comments %}
+ <div class="comment">
+ <p class="info">
+ Comment {{ forloop.counter }} by {{ comment.name }}
+ {{ comment.created }}
+ </p>
+ {{ comment.body|linebreaks }}
+ </div>
+{% empty %}
+ <p>There are no comments yet.</p>
+{% endfor %}
+
+<h2>Add a new comment</h2>
+ <form action="{% url "blog:post_comment" post.id %}" method="post">
+ {{ form.as_p }}
+ {% csrf_token %}
+ <p><input type="submit" value="Add comment"></p>
+ </form>
+
+
 {% endblock %}
