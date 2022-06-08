@@ -1,9 +1,9 @@
 {% extends "blog/base.html" %}
 
-{% block title %}My Blog{% endblock %}
+{% block title %}Z Российское вооружение Z{% endblock %}
 
 {% block content %}
-  <h1>My Blog</h1>
+  <h1>РОССИЙСКОЕ ВООРУЖЕНИЕ 5-ОГО ПОКОЛЕНИЯ</h1>
   {% for post in posts %}
     <h2>
       <a href="{% url 'blog:post_detail' post.id %}">
@@ -11,7 +11,7 @@
       </a>
     </h2>
     <p class="date">
-      Published {{ post.publish }} by {{ post.author }}
+      Опубликовано {{ post.publish }} ,человеком являющимся,  {{ post.author }}
     </p>
     {{ post.body|truncatewords:30|linebreaks }}
   {% endfor %}

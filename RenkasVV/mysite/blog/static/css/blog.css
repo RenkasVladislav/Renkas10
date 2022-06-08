@@ -2,10 +2,11 @@ body {
     margin:0;
     padding:0;
     font-family:helvetica, sans-serif; 
+	background: url('https://dan-news.info/storage/c/2022/03/01/1646128989_576015_64.jpg')
 }
 
 a { 
-    color:#00abff;
+    color:#ff0023;
     text-decoration:none; 
 }
 
@@ -13,31 +14,37 @@ h1 {
     font-weight:normal;
     border-bottom:1px solid #bbb;
     padding:0 0 10px 0;
+	color:#ff0000;
+	font-size: 25px;
 }
 
 h2 {
     font-weight:normal;
     margin:30px 0 0;
+	color:#ff0023;
+	font-size: 25px;
 }
 
 #content { 
     float:left;
     width:60%;
-    padding:0 0 0 30px; 
+    padding:0 0 0 60px; 
+	color:#ff0000;
 }
 
 #sidebar { 
     float:right;
     width:30%;
     padding:10px;
-    background:#efefef; 
+	background:#436039; 
     height:100%;
+	border-radius:15pt;
 }
 
 p.date { 
-    color:#ccc;
+    color:#ffffff;
     font-family: georgia, serif;
-    font-size: 12px;
+    font-size: 15px;
     font-style: italic; 
 }
 
